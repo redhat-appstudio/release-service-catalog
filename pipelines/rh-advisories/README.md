@@ -21,5 +21,9 @@ the rh-push-to-registry-redhat-io pipeline.
 | taskGitUrl | The url to the git repo where the release-service-catalog tasks to be used are stored | Yes | https://github.com/redhat-appstudio/release-service-catalog.git |
 | taskGitRevision | The revision in the taskGitUrl repo to be used | No | - |
 
+## Changes in 0.2.1
+- Added `when` clause to `push-snapshot` task in the pipeline to ensure it only executes when
+  the `apply-mapping` task indicates that mapping was successful.
+
 ## Changes in 0.2.0
 - Remove push-sbom-to-pyxis. It has been replaced by manifest-box.
